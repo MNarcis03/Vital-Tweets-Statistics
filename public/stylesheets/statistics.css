@@ -1,0 +1,329 @@
+/* HTML RESETTER */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    font-family: 'Arvo', serif;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* BODY */
+
+body {
+    background: #faf9f8;
+}
+
+
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 70px;
+    background-color: #4f618a;
+    border: 0px;
+    margin: 0px auto;
+    /*position: fixed;*/
+    padding: 0px;
+    top: 0%;
+    left: 0%;
+    z-index: 10;
+    display: flex;
+    /* grid-row: 1; */
+}
+
+.logo {
+    width: 13%;
+    /* height:100px; */
+    margin-left: 1%;
+    margin-top: 0%;
+}
+
+
+/* NAV-SECTION */
+
+.nav-section {
+    background-color: #363B48;
+}
+
+.nav-item a {
+    text-transform: uppercase;
+    color: #faf9f8;
+}
+
+
+/* MAIN-SECTION */
+
+.main-section {
+    width: 100%;
+    
+}
+
+.container {
+    overflow: auto;
+    margin: 0 auto;
+}
+
+.title{
+    text-align:center;
+    font-family: "Segoe UI";
+    font-weight: bold;
+    width: 30%;
+    margin-top:10px;
+}
+
+select {
+    background-color:white;
+    font-family: "Segoe UI";
+    font-weight: bold;
+    color: #4f618a;
+    border: 4px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    }
+    
+
+/* FOOTER */
+
+.footer-text-color {
+    color: #faf9f8;
+    padding-top: 5px;
+}
+
+.footer {
+    height: 70px;
+background-color: #fff;
+bottom: 0px;
+width: 100%;
+margin-top:25px;
+text-align: center;
+padding-top: 25px;
+}
+
+footer a:hover {
+    color: #faf9f8;
+}
+
+.footer .container{
+    max-width: 1600px;
+width: 100%;
+margin: 0 auto;
+}
+
+.footer b{
+    font-weight: 700;
+    font-family: SEGOE UI !important;
+}
+
+.footer a{
+    font-weight: 600;
+font-size: 20px;
+color: #E84118;
+text-decoration: none;
+font-size: 17px;
+margin-right: 50px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    color: #faf9f8;
+}
+
+.row {
+    margin-top: 20px;
+}
+
+.h1 {
+    text-align: center;
+    margin-top: 110px;
+}
+
+nav {
+    background-color: #DFE1E8;
+    opacity: 70%;
+    font-family: "Segoe UI";
+    padding: 20px;
+}
+
+.bigtitle {
+    margin-top: 100px;
+    height: 50px;
+    font-size: 2.5em;
+    text-align: center;
+    font-family: "Segoe UI";
+    font-weight: bold;
+}
+
+.form-input {
+    margin-right: 10px;
+}
+
+form {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sus {
+    text-align: center;
+    height: 100px;
+    background-color: #fff;
+    position: relative;
+}
+
+
+
+.logo img{
+    height: 100px;
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
+a{
+    color: #007bff;
+text-decoration: none;
+background-color: transparent;
+}
+
+
+
+@media only screen and (max-width:500px){
+
+    .statistics-form{ flex-flow: column;}
+
+}
+
+

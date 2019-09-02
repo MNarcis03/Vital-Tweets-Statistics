@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    
+    <title>Statistics</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Arvo"
+        rel="stylesheet">
+    
+    <link rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="./public/stylesheet/Statistics.css"> -->
+    <link rel="stylesheet" type="text/css" href="../stylesheets/statistics.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    
+    <script type="text/javascript" src="../javascripts/statistics.js" async></script>
+    
+</head>
+
+<body>
+    <div class="sus">
+        <a class="logo" href="http://vitaltweets.grupa2.website/">
+            <img src="../logocolorat.png">
+        </a>
+    </div>
+
+    <div class="bigtitle container">STATISTICS</div>
+    <nav class="container">
+        <form class="statistics-form">
+            <div class="form-input">
+                <div class="label">Country</div>
+                <select style="height:40px; width:100%;margin-top:11px;" name="country" id="country-select" required>
+                    <option value="" disabled selected>Select Country</option>
+                    <option name="default" value="All">All</option>
+                    <% countries.forEach(function(country) { %>
+                        <option name="<%= country %>" value="<%= country %>"><%= country %></option>
+                    <% }); %>
+                </select>
+            </div>
+            <div id="disease" class="form-input" style="display: none;">
+                <div class="label">Disease</div>
+                <select style="height:40px; width:100%;margin-top:11px;" name="disease" id="diseases-select" required>
+                    <option value="" disabled selected>Select Disease</option>                    
+                    <option value="All" name="All">All</option>
+                </select>
+            </div>
+
+            <div class="form-input" id="timestamp" style="display:none">
+                <div class="label">Timestamp </div>
+                <select style="height:40px; width:100%;margin-top:11px;" name="timestamp" id="evolution" required>
+                    <option value="" disabled selected>Select Timestamp</option>                    
+                    <option value="A week ago">A week ago</option>
+                    <option value="A month ago">A month ago</option>
+                    <option value="Three months ago">Three months ago</option>
+                    <option value="Six months ago">Six months ago</option>
+                </select>
+            </div>
+
+            <div class="form-button" style="display:none">
+                <div class="submit-button" style="width:100%; margin-top:15px;">
+                    <input id="create-stat" type="submit" value="Generate Statistics" style=" width:100%;height:40px;color:white;background-color: #4f618a;  margin-top:10px;" >
+                </div>
+            </div>
+
+            <div id="reset-canvas" style="display: none;font-size:20px; height:40px; margin-top:35px;">
+                <a href="/statistics">
+                <i class="fas fa-redo"></i>
+            </a>
+            </div>
+        </form>
+    </nav>
+    
+    <main id="main-display" class="main-section container" style="margin-top:50px">
+    <canvas id="ChartPie" width="800" height="450"></canvas>
+    </main>
+    
+    <div class="footer">
+        <div class="container">
+          <a href="https://vitaltweets.herokuapp.com/statistics"><b>Statistics</b></a>
+          <a href="./map.php"><b>Map</b></a>
+          <a href="https://crawling-ii-a2.herokuapp.com/"><b>Crawling</b></a>
+          <a href="./aboutUs/aboutus.html"><b>About Us</b></a>
+        </div>
+      </div>
+      
+
+</body>
+
+</html>
